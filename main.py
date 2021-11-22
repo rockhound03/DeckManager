@@ -9,6 +9,7 @@ from kivy.uix.tabbedpanel import TabbedPanel
 from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
+from kivy.properties import ListProperty,NumericProperty
 #eee7b366-d9c1-4dc2-ac5c-ad177c4a18da
 
 test_string = ["item","item2","item3"]
