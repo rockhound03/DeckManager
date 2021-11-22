@@ -24,11 +24,14 @@ Builder.load_string("""
             text: 'Select stuff'
     TabbedPanelItem:
         text: 'Deck Builder'
-        BoxLayout:
-            Label:
-                text: 'Enter by set'
+        GridLayout:
+            cols:2
+            row_force_default:True
+            row_default_height:40
             Button:
                 text: 'Create new deck'
+                size_hint_x:None
+                width:120
     TabbedPanelItem:
         text: 'Deck List'
         RstDocument:
