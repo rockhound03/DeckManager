@@ -12,48 +12,7 @@ from kivy.uix.textinput import TextInput
 from kivy.properties import ListProperty,NumericProperty
 #eee7b366-d9c1-4dc2-ac5c-ad177c4a18da
 
-test_string = ["item","item2","item3"]
-Builder.load_string("""
-
-<Test>:
-    pos_hint: {'center_x': .5, 'center_y': .5}
-    do_default_tab: False
-    tab_width: 130
-
-    TabbedPanelItem:
-        text: 'Card Sets'
-        Label:
-            text: 'Select stuff'
-    TabbedPanelItem:
-        text: 'Deck Builder'
-        GridLayout:
-            cols:2
-            padding:[5,10,5,10]
-            spacing:[10,10]
-            row_force_default:True
-            row_default_height:50
-            Button:
-                text: 'Create new deck'
-                size_hint_x:None
-                width:120
-            Label:
-                text: 'Create a new non-standard deck (any set)'
-            Button:
-                text: 'Create new deck'
-                size_hint_x:None
-                width:120
-            Label:
-                text: 'Create a new standard deck (***current sets only***)'
-    TabbedPanelItem:
-        text: 'Deck List'
-        RstDocument:
-            text:
-                '\\n'.join(("Complete list", "------------",
-                "Summary view."))
-
-
-
-""")
+#test_string = ["item","item2","item3"]
 
 class Test(TabbedPanel):
     pass
