@@ -13,7 +13,6 @@ from kivy.uix.textinput import TextInput
 Builder.load_string("""
 
 <Test>:
-    size_hint: .7, .7
     pos_hint: {'center_x': .5, 'center_y': .5}
     do_default_tab: False
     tab_width: 130
@@ -26,12 +25,23 @@ Builder.load_string("""
         text: 'Deck Builder'
         GridLayout:
             cols:2
+            padding:[5,15,5,15]
+            spacing_horizontal:10
+            spacing_vertical:30
             row_force_default:True
-            row_default_height:40
+            row_default_height:50
             Button:
                 text: 'Create new deck'
                 size_hint_x:None
                 width:120
+            Label:
+                text: 'Create a new non-standard deck (any set)'
+            Button:
+                text: 'Create new deck'
+                size_hint_x:None
+                width:120
+            Label:
+                text: 'Create a new standard deck (***current sets only***)'
     TabbedPanelItem:
         text: 'Deck List'
         RstDocument:
