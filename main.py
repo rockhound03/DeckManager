@@ -9,7 +9,9 @@ from kivy.uix.tabbedpanel import TabbedPanel
 from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
+#eee7b366-d9c1-4dc2-ac5c-ad177c4a18da
 
+test_string = ["item","item2","item3"]
 Builder.load_string("""
 
 <Test>:
@@ -25,9 +27,8 @@ Builder.load_string("""
         text: 'Deck Builder'
         GridLayout:
             cols:2
-            padding:[5,15,5,15]
-            spacing_horizontal:10
-            spacing_vertical:30
+            padding:[5,10,5,10]
+            spacing:[10,10]
             row_force_default:True
             row_default_height:50
             Button:
