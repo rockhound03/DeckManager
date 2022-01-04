@@ -1,12 +1,16 @@
 <Test>:
+    label_result: my_custom_response
     pos_hint: {'center_x': .5, 'center_y': .5}
     do_default_tab: False
     tab_width: 130
 
     TabbedPanelItem:
         text: 'Card Sets'
-        Label:
-            text: 'Select stuff'
+        RelativeLayout:
+            Label:
+                text: 'Select stuff'
+                pos_hint: {'center_x':.1,'center_y':0.9}
+                color:22,2,0
     TabbedPanelItem:
         text: 'Deck Builder'
         GridLayout:
@@ -19,16 +23,22 @@
                 text: 'Create new deck'
                 size_hint_x:None
                 width:120
+                on_press: root.set_list()
             Label:
                 text: 'Create a new non-standard deck (any set)'
             Button:
-                text: 'Create new deck'
+                text: 'Search'
                 size_hint_x:None
                 width:120
+                on_press: root.get_search(search_txt.text)
+            TextInput:
+                id: search_txt
+            Label:
+                id: my_custom_response
+
             Label:
                 text: 'Create a new standard deck (***current sets only***)'
     TabbedPanelItem:
         text: 'Deck List'
         RstDocument:
-            text:
-                '\\n'.join(("Complete list", "------------","Summary view."))
+            text:root.info
