@@ -1,5 +1,6 @@
 <Test>:
     label_result: my_custom_response
+    label_search: search_result_status
     pos_hint: {'center_x': .5, 'center_y': .5}
     do_default_tab: False
     tab_width: 130
@@ -11,34 +12,97 @@
                 text: 'Select stuff'
                 pos_hint: {'center_x':.1,'center_y':0.9}
                 color:22,2,0
+            Label:
+                id: my_custom_response
     TabbedPanelItem:
         text: 'Deck Builder'
         GridLayout:
-            cols:2
-            padding:[5,10,5,10]
-            spacing:[10,10]
+            cols:8
+            padding:[5,5,5,5]
+            spacing:[5,5]
             row_force_default:True
             row_default_height:50
             Button:
-                text: 'Create new deck'
-                size_hint_x:None
-                width:120
-                on_press: root.set_list()
-            Label:
-                text: 'Create a new non-standard deck (any set)'
-            Button:
                 text: 'Search'
                 size_hint_x:None
-                width:120
+                width:50
                 on_press: root.get_search(search_txt.text)
             TextInput:
                 id: search_txt
             Label:
-                id: my_custom_response
-
+                text:'||'
             Label:
-                text: 'Create a new standard deck (***current sets only***)'
+                id: search_result_status
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+                text: 'Search names of cards'
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+                text: 'Other options:'
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+                text: 'Energy filters.'
+            Label:
+                text: 'Attacks,'
+            Label:
+                text: 'Ability.'
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+                text: 'Grass'
+            Label:
+                text: 'Psychic'
+            Label:
+                text: 'Fire'
+            Label:
+                text: 'Electric'
+            Label:
+                text: 'Water'
+            Label:
+            Label:
+            Label:
+            CheckBox:
+                id: 'check_grass'
+                text: 'Grass'
+                width: 20
+            CheckBox:
+                id: 'check_psychic'
+                text: 'Grass'
+                width: 20
+            CheckBox:
+                id: 'check_fire'
+                text: 'Grass'
+                width: 20
+            CheckBox:
+                id: 'check_electric'
+                text: 'Grass'
+                width: 20
+            CheckBox:
+                id: 'check_water'
+                text: 'Grass'
+                width: 20
+
+    TabbedPanelItem:
+        text: 'Search Results: All'
     TabbedPanelItem:
         text: 'Deck List'
         RstDocument:
-            text:root.info
+            text:root.info + "\n more stuff"
